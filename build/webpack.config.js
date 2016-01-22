@@ -46,8 +46,6 @@ webpackConfig.output = {
 // ------------------------------------
 webpackConfig.plugins = [
   new webpack.DefinePlugin(config.globals),
-  new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.optimize.DedupePlugin(),
   new HtmlWebpackPlugin({
     template: paths.client('index.html'),
     hash: false,
@@ -67,12 +65,15 @@ if (__DEV__) {
     new webpack.NoErrorsPlugin()
   )
 } else if (__PROD__) {
-  debug('Apply UglifyJS plugin.')
+  debug('Enable plugins for production (OccurenceOrder, Dedupe & UglifyJS).')
   webpackConfig.plugins.push(
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         unused: true,
-        dead_code: true
+        dead_code: true,
+        warnings: false
       }
     })
   )
@@ -138,6 +139,16 @@ webpackConfig.module.loaders.push({
     cssLoader,
     'postcss',
     'sass'
+  ]
+})
+
+webpackConfig.module.loaders.push({
+  test: /\.css$/,
+  include: /src/,
+  loaders: [
+    'style',
+    cssLoader,
+    'postcss'
   ]
 })
 
