@@ -19,8 +19,8 @@ export default class HoverDemoOwnProps extends Component {
 
     return (
       <div style={this.styles}
-            onMouseOver={mouseOver}
-            onMouseOut={mouseOut}>
+           onMouseOver={mouseOver}
+           onMouseOut={mouseOut}>
         <span className={classes.label}>{this.props.label}</span>
       </div>
       )
@@ -32,14 +32,3 @@ HoverDemoOwnProps.propTypes = {
   label: string,
   color: string.isRequired
 }
-
-  // state = { hov}
-  // constructor (props) {
-  //   super(props)
-  //   this.state = {
-  //     ...props,
-  //     hover: false
-  //   }
-  //   this._ss = this.setState.bind(this)
-  //   this.setState = (s) => { console.log('%cRED:', 'color:red;', s); this._ss(s) }
-  // }

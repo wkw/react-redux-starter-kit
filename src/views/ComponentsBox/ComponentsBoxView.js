@@ -14,8 +14,8 @@ export default class ComponentsBoxView extends Component {
         <h1>Reusable Components</h1>
         <span>Mixins (formerly), Higher-Order Components with es6 classes</span>
 
-        <HoverableBlock label='Higher-Order Component' color='#4A80B9'/>
-        <HoverDemoOwnProps label='Own Props' color='#EF3B4A'/>
+        <HoverableBlock label='Higher-Order Component' color='#289C36' hover={false}/>
+        <HoverDemoOwnProps label='Own Props' color='#EF3B4A' hover={false}/>
       </div>
       )
   }
