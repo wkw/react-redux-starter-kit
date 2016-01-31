@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { actions as counterActions } from '../../redux/modules/counter'
-import DuckImage from './Duck.jpg'
+import Image from './React.js_logo.svg.png'
 import classes from './HomeView.scss'
 
 // We define mapStateToProps where we'd normally use
@@ -26,7 +26,7 @@ export class HomeView extends React.Component {
         <div className='row'>
           <div className='col-xs-2 col-xs-offset-5'>
             <img className={classes.duck}
-                 src={DuckImage}
+                 src={Image}
                  alt='This is a duck, because Redux.' />
           </div>
         </div>
@@ -47,6 +47,8 @@ export class HomeView extends React.Component {
         </button>
         <hr />
         <Link to='/404'>Go to 404 Page</Link>
+        <hr />
+        <Link to='/hoc'>Reusable Components</Link>
       </div>
     )
   }
