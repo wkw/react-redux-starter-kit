@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from './HoverStyles'
+import classes from './ComponentsBox.scss'
 
 const { string, bool } = React.PropTypes
 
@@ -14,7 +15,7 @@ export default class HoverDemo extends Component {
   render () {
     return (
       <div style={this.styles} {...this.props}>
-        <span>{this.props.label}</span>
+        <span className={classes.label}>{this.props.label}</span>
       </div>
       )
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from './HoverStyles'
+import classes from './ComponentsBox.scss'
 
 const { string, bool } = React.PropTypes
 
@@ -20,7 +21,7 @@ export default class HoverDemoOwnProps extends Component {
       <div style={this.styles}
             onMouseOver={mouseOver}
             onMouseOut={mouseOut}>
-        <span>{this.props.label}</span>
+        <span className={classes.label}>{this.props.label}</span>
       </div>
       )
   }

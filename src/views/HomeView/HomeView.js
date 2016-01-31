@@ -27,7 +27,7 @@ export class HomeView extends React.Component {
           <div className='col-xs-2 col-xs-offset-5'>
             <img className={classes.duck}
                  src={Image}
-                 alt='This is a duck, because Redux.' />
+                 alt='Redux.' />
           </div>
         </div>
         <h1>Welcome to the React Redux Starter Kit</h1>

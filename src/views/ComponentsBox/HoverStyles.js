@@ -2,15 +2,16 @@ const defaultColor = '#4A80B9'
 
 const styles = (color = defaultColor) => {
   const defaultStyles = {
-    minHeight: 150,
-    width: '50%',
+    height: 120,
+    maxWidth: 300,
     backgroundColor: color,
     border: '1px solid black',
     margin: '40px auto',
-    padding: '8% 20px',
+    padding: '20px',
     color: '#FFF',
     fontSize: 25,
     transition: 'all .2s ease-in-out'
+
   }
 
   const hoverStyles = {
