@@ -6,7 +6,7 @@ import DisplayBox from './DisplayBox'
 const { string } = React.PropTypes
 const DELAY = 3000
 const CHUCK_API = 'http://api.icndb.com/jokes/random'
-const BACON_API = 'https://baconipsum.com/api/?type=meat-and-filler&paras=1'
+const BACON_API = 'https://baconipsum.com/api/?type=meat-and-filler&paras=1&sentences=1'
 
 export default class PromiseDemo extends Component {
   constructor (props) {
