@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import HoverDemo from 'views/ComponentsBox/HoverDemo'
-import HoverDemoOwnProps from 'views/ComponentsBox/HoverDemoOwnProps'
-import hover from 'views/ComponentsBox/components/Hover'
-import classes from './ComponentsBox.scss'
+import HoverDemo from 'views/HOC/HoverDemo'
+import HoverDemoOwnProps from 'views/HOC/HoverDemoOwnProps'
+import hover from 'views/HOC/composers/Hover'
+import classes from './HOC.scss'
+import PromiseDemo from './PromiseDemo'
 
 export default class ComponentsBoxView extends Component {
 
   render () {
+    // wrap the HoverDemo component
     const HoverableBlock = hover(HoverDemo)
 
     return (
@@ -16,6 +18,8 @@ export default class ComponentsBoxView extends Component {
 
         <HoverableBlock label='Higher-Order Component' color='#289C36' hover={false}/>
         <HoverDemoOwnProps label='Own Props' color='#EF3B4A' hover={false}/>
+
+        <PromiseDemo label={`Promise Something`} />
       </div>
       )
   }

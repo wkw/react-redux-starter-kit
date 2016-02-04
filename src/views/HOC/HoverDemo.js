@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './HoverStyles'
-import classes from './ComponentsBox.scss'
+import classes from './HOC.scss'
 
 const { string, bool } = React.PropTypes
 
