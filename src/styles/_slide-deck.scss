@@ -29,5 +29,18 @@
   font-size: 4rem;
   p {
     font-size: 3rem;
+    line-height: 3rem;
+  }
+  .small {
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+    // text-align: left;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .ref  {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-style: italic;
   }
 }

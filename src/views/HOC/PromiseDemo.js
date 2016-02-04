@@ -4,7 +4,7 @@ import Delay from './composers/Delay'
 import DisplayBox from './DisplayBox'
 
 const { string } = React.PropTypes
-const DELAY = 1500
+const DELAY = 3000
 const CHUCK_API = 'http://api.icndb.com/jokes/random'
 const BACON_API = 'https://baconipsum.com/api/?type=meat-and-filler&paras=1'
 
