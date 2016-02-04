@@ -49,6 +49,8 @@ export class HomeView extends React.Component {
         <Link to='/404'>Go to 404 Page</Link>
         <hr />
         <Link to='/hoc'>Reusable Components</Link>
+        <hr />
+        <Link to='/slides'>HOC Slide Deck</Link>
       </div>
     )
   }

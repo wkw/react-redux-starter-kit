@@ -10,12 +10,14 @@ import CoreLayout from 'layouts/CoreLayout/CoreLayout'
 import HomeView from 'views/HomeView/HomeView'
 import NotFoundView from 'views/NotFoundView/NotFoundView'
 import HOCView from 'views/HOC/HOCView'
+import SlideDeck from 'views/SlideDeck/SlideDeck'
 
 export default (
   <Route path='/' component={CoreLayout}>
     <IndexRoute component={HomeView} />
     <Route path='/404' component={NotFoundView} />
     <Route path='/hoc' component={HOCView} />
+    <Route path='/slides' component={SlideDeck} />
     <Redirect from='*' to='/404' />
   </Route>
 )
