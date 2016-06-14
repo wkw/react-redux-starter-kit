@@ -12,11 +12,11 @@ export default class Deck extends React.Component {
     return (
       <div className='Deck'>
         <div className='Deck-container'
-             style={{
-               width: `${Children.count(children) * 100}vw`,
-               transform: `translate(${-currentSlide * 100}vw, 0)`,
-               transition: 'all .25s ease-out'
-             }}>
+          style={{
+            width: `${Children.count(children) * 100}vw`,
+            transform: `translate(${-currentSlide * 100}vw, 0)`,
+            transition: 'all .25s ease-out'
+          }}>
           {Children.map(children, this.wrapChild)}
         </div>
       </div>

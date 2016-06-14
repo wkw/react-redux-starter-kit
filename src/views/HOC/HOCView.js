@@ -19,7 +19,7 @@ export default class ComponentsBoxView extends Component {
         <HoverableBlock label='Higher-Order Component' color='#289C36' hover={false}/>
         <HoverDemoOwnProps label='Own Props' color='#EF3B4A' hover={false}/>
 
-        <PromiseDemo label={`Promise Something`} />
+        <PromiseDemo label={'Promise Something'} />
       </div>
       )
   }

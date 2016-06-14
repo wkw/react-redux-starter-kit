@@ -26,7 +26,7 @@ export default class PromiseDemo extends Component {
 
     return (
       <div className='button-demo'>
-        <button className='btn btn-primary btn-lg' onClick={() => this.setState(...this.state, {clicked: true})}>
+        <button className='btn btn-primary btn-lg' onClick={this.clickHandler}>
           {this.props.label}
         </button>
 
@@ -34,9 +34,9 @@ export default class PromiseDemo extends Component {
           {
             this.state.clicked &&
               [
-                <FetchJoke content={fetch(CHUCK_API).then(resp => (resp.json()).then(val => (val.value.joke)))} key='1'/>,
-                <DelayedJoke content={fetch(CHUCK_API).then(resp => (resp.json()).then(val => (val.value.joke)))} key='2'/>,
-                <Bacon content={fetch(BACON_API).then(resp => (resp.json()).then(val => (val[0])))} key='3'/>
+                <FetchJoke content={fetch(CHUCK_API).then((resp) => (resp.json()).then((val) => (val.value.joke)))} key='1'/>,
+                <DelayedJoke content={fetch(CHUCK_API).then((resp) => (resp.json()).then((val) => (val.value.joke)))} key='2'/>,
+                <Bacon content={fetch(BACON_API).then((resp) => (resp.json()).then((val) => (val[0])))} key='3'/>
               ]
           }
         </div>

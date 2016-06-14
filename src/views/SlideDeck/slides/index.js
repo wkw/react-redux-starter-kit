@@ -65,7 +65,7 @@ export default [
   <div>
     Fetch Some Data,<br/>then Render
     <div style={{fontSize: '3vmin'}}>
-      <PromiseDemo className='small' label={`Promise Something`} />
+      <PromiseDemo className='small' label={'Promise Something'} />
     </div>
   </div>,
   <div><i>fin</i></div>

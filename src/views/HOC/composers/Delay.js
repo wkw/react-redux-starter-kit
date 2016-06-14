@@ -10,7 +10,7 @@ var Delay = (delay, DelayedComponent) => class extends Component {
     this.state = {completed: false}
   }
 
-  static displayName = `Delayed(${ getDisplayName(DelayedComponent) })`;
+  static displayName = `Delayed(${getDisplayName(DelayedComponent)})`;
 
   componentDidMount () {
     // start timer

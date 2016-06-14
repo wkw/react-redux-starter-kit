@@ -20,7 +20,7 @@ const hover = (WrappedComponent) => class Hover extends Component {
     children: element
   };
 
-  static displayName = `Hover(${ getDisplayName(WrappedComponent) })`;
+  static displayName = `Hover(${getDisplayName(WrappedComponent)})`;
 
   render () {
     const { handlers, ...props } = this.state

@@ -15,8 +15,8 @@ export default class HoverDemoOwnProps extends Component {
 
     return (
       <div style={activeStyle}
-           onMouseOver={mouseOver}
-           onMouseOut={mouseOut}>
+        onMouseOver={mouseOver}
+        onMouseOut={mouseOut}>
         <span className={classes.label}>{this.props.label}</span>
       </div>
       )

@@ -14,11 +14,19 @@ const mapStateToProps = (state) => ({
   counter: state.counter
 })
 export class HomeView extends React.Component {
+  constructor () {
+    super()
+    this.inc = this.inc.bind(this)
+  }
   static propTypes = {
     counter: PropTypes.number.isRequired,
     doubleAsync: PropTypes.func.isRequired,
     increment: PropTypes.func.isRequired
   };
+
+  inc () {
+    this.props.increment(1)
+  }
 
   render () {
     return (
@@ -26,8 +34,8 @@ export class HomeView extends React.Component {
         <div className='row'>
           <div className='col-xs-2 col-xs-offset-5'>
             <img className={classes.duck}
-                 src={Image}
-                 alt='Redux.' />
+              src={Image}
+              alt='Redux.' />
           </div>
         </div>
         <h1>Welcome to the React Redux Starter Kit</h1>
@@ -37,12 +45,12 @@ export class HomeView extends React.Component {
           <span className={classes['counter--green']}>{this.props.counter}</span>
         </h2>
         <button className='btn btn-default'
-                onClick={() => this.props.increment(1)}>
+          onClick={this.inc}>
           Increment
         </button>
         {' '}
         <button className='btn btn-default'
-                onClick={this.props.doubleAsync}>
+          onClick={this.props.doubleAsync}>
           Double (Async)
         </button>
         <hr />
